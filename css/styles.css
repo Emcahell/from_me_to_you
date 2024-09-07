@@ -1,0 +1,104 @@
+:root{
+    --background-cora: rgb(255, 60, 89);
+    --tag-tittle: lightcoral;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgba(240, 128, 128, 0.123);
+}
+
+.message-title{
+    position: absolute;
+    top: 100px;
+    color: rgb(117, 117, 117);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.message-title span{
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-bottom: 5px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    color: white;
+    background: var(--tag-tittle);
+}
+
+.container-cora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    /* border: 1px solid salmon; */
+    cursor: pointer;
+    z-index: 100;
+}
+
+.cora{
+    position: relative;
+    transform: rotate(315deg);
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: var(--background-cora);
+}
+.cora::before{
+    position: relative;
+    bottom: 50px;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--background-cora);
+}
+.cora::after{
+    position: relative;
+    left: 50px;
+    bottom: 100px;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--background-cora);
+}
+
+.container-message{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    background: rgba(128, 128, 128, 0.671);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.container-message p{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 255, 255);  
+}
+
+.active{
+    opacity: 1;
+    z-index: 500;
+}
