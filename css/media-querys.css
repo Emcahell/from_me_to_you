@@ -18,4 +18,18 @@
     .container-message p{
         font-size: 47px;
     }
+
+    .btn-close{
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn-close p svg{
+        width: 15px;
+        height: 15px;
+    }
+    .btn-close p svg:hover{
+        width: 23px;
+        height: 23px;
+    }
 }

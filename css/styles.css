@@ -98,6 +98,38 @@ body{
     color: rgb(255, 255, 255);  
 }
 
+.btn-close{
+    position: absolute;
+    top: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* padding: 10px; */
+    background: rgba(128, 128, 128, 0.671);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+.btn-close p{
+    line-height: 10px;
+}
+.btn-close p svg{
+    transition: .5s;
+}
+
+.btn-close:hover{
+    background: rgba(73, 73, 73, 0.671);
+}
+.btn-close p svg:hover{
+    width: 30px;
+    height: 30px;
+}
+
 .active{
     opacity: 1;
     z-index: 500;
